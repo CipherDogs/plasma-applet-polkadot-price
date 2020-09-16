@@ -11,7 +11,6 @@ kpackagetool5 -t Plasma/Applet --install ./package/
 Use additional `-g` flag to install plasmoid globally, for all users.
 
 ## Supported sources
-- BW
 - Cryptonator
 
 ## Supported currencies

@@ -1,11 +1,11 @@
 var sources = [
 	{
-		name: 'BW',
-		url: 'https://www.bw.com/exchange/config/controller/website/pricecontroller/getassistprice',
-		homepage: 'https://www.bw.com/',
+		name: 'Cryptonator',
+		url: 'https://api.cryptonator.com/api/ticker/dot-usd',
+		homepage: 'https://cryptonator.com/',
 		currency: 'USD',
 		getRate: function(data) {
-			return data.datas.usd.xmr;
+			return data.ticker.price;
 		}
 	},
 ];
@@ -27,7 +27,7 @@ var currencySymbols = {
 };
 
 function getRate(source, currency, callback) {
-	var source = typeof source === 'undefined' ? getSourceByName('BW') : getSourceByName(source);
+	var source = typeof source === 'undefined' ? getSourceByName('Cryptonator') : getSourceByName(source);
 	
 	if(source === null) return false;
 	
